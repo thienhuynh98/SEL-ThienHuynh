@@ -28,9 +28,27 @@ describe('Implicit Assertion', () => {
     cy.contains("Launch Search").click()
   })
 })
-describe('Implicit Assertion', () => {
-  it('testing implicit assertion', () => {
+
+describe('Explicit Assertion', () => {
+  it('testing explicit assertion', () => {
+    let name = "Thien Huynh";
+    expect(name).to.be.equal("Thien Huynh");
+    assert.equal(4, "4", "Equal");
+    assert.strictEqual(4, "4", "NotEqual");
+  })
+})
+
+describe('GitHub Actions Test', () => {
+  it('github actions tests', () => {
     cy.visit('http://localhost:3000/')
-    cy.contains("THIEN HUYNH DOING TESTING");
+    cy.contains("THIEN HUYNH DOING CYPRESS TEST");
+    cy.contains("Increase").click()
+    cy.contains("Increase").click()
+    cy.contains("Increase").click()
+    cy.contains("Increase").click()
+    cy.contains("Increase").click()
+    cy.contains("Decrease").click()
+    cy.contains("Decrease").click()
+    cy.contains("3");
   })
 })
