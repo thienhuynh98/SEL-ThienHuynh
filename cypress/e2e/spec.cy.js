@@ -34,7 +34,7 @@ describe('Explicit Assertion', () => {
     let name = "Thien Huynh";
     expect(name).to.be.equal("Thien Huynh");
     assert.equal(4, "4", "Equal");
-    assert.strictEqual(4, "4", "NotEqual");
+    assert.strictEqual("4", "4", "Equal");
   })
 })
 
