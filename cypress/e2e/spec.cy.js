@@ -6,10 +6,6 @@ describe('Implicit Assertion', () => {
     cy.get('input[name=sentiment][value=false]').check()
     cy.get('input[name=sentiment][value=true]')
         .should('not.be.checked')
-    cy.get('input[name=sentiment][value=false]').check()
-    cy.get('input[name=sentiment][value=true]').check()
-    cy.get('input[name=sentiment][value=false]')
-        .should('not.be.checked')
     cy.get('input[name=twitter]').uncheck()
     cy.get('input[name=reddit]').uncheck()
     cy.get('input[name=youtube]').uncheck()
@@ -49,6 +45,6 @@ describe('GitHub Actions Test', () => {
     cy.contains("Increase").click()
     cy.contains("Decrease").click()
     cy.contains("Decrease").click()
-    cy.contains("3");
+    cy.contains("4");
   })
 })
